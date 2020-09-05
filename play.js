@@ -10,6 +10,7 @@ let fizbuz = (n) =>  {
         } else {
             result.push(i);
         }
+        console.log(result);
         return result;
     }
 }
