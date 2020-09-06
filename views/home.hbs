@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <link href="../css/home.css" rel="stylesheet" type="text/css" />
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1 class="text-center">Fizz Buzz</h1>
+            </header>
+        
+            <main>
+                <form action="/play" method="POST">
+                    <div class="form-group">
+                        <label>Enter the input to start the Fizz Buzz Game</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="play-input" type="text" name="play-input"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="play-submit" type="submit" value="SUBMIT" />
+                    </div>
+                    
+                </form>
+
+                <h2 class="text-center">RESULT</h2>
+                    {{#if result}}
+                        <table>
+                            {{#each result as |item| }}
+                                <tr>
+                                    <td>
+                                        <p>{{ item }}</p>
+                                    </td>
+                                </tr>
+                                
+                            {{/each}}
+                        </table>
+                    {{/if }}
+            </main>
+        </div>
+    </body>
+</html>
+
